@@ -8,7 +8,11 @@
 #from base import ClassTimeIt
 import time
 import os
-from base.fab import *
+try:
+    from fabsim.base.fab import *
+except ImportError:
+    from base.fab import *
+
 # Add local script, blackbox and template path.
 add_local_paths("FabProfile")
 
